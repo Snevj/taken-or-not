@@ -1,0 +1,1 @@
+Well this is website to find a girl whether she's taken or not in the college, based upon the advices given by different people, this program will just show the probability of a girl or maybe a boy as well if they're taken or not in the college and acoording to this will decrease the amount of creep texts women get asking for dates.
