@@ -7,10 +7,12 @@
     <link rel="stylesheet" href="feedme.css" >
 </head>
 <body>
+    
     <div class="hero">
         <div class="card">
-            <h1>Anonymous User</h1>
-            <p>@user</p>
+            <button onclick="displayName()">Enter Your Name</button>
+            <p id="nameParagraph"><h1></h1></p>
+            <p id="otherParagraph"></p>
             <img src="pfp.jpeg" id="profile-pic">
             <label for="input-file">Enter their image</label>
             <input type="file" accept="image/jpeg, image/png, image/jpg" id="input-file">
@@ -23,8 +25,23 @@
         inputFile.onchange = function (){
             profilePic.src = URL.createObjectURL(inputFile.files[0]);
         }
-        /*var name = window.prompt("What is your name");
-        document.write("Hey "+name+" How you doing");*/
+        var storedName = ""; 
+
+        function displayName() {
+            var name = prompt("Please enter your name:");
+            if (name !== null && name !== "") {
+                storedName = name;
+                var nameParagraph = document.getElementById("nameParagraph");
+                nameParagraph.textContent = "Hello, " + storedName;
+            } else {
+                alert("You didn't enter a name!");
+            }
+        }
+        function useStoredName() {
+            var otherParagraph = document.getElementById("otherParagraph");
+            otherParagraph.textContent = "This is another paragraph using the stored name: " + storedName;
+        }
     </script>
+
 </body>
 </html>
