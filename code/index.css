@@ -23,5 +23,13 @@ button {
     border-radius: 5px;
 }
 .home {
-   
+    margin-bottom: auto;
+    margin-top: 40px;
+}
+#home-button {
+    padding: 5px;
+    font-weight: bold;
+    color: black;
+    background-color: rgb(182, 186, 245);
+    width: 80px;
 }
