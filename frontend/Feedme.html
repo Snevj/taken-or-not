@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Feed me</title>
-    <link rel="stylesheet" href="feedme.css" >
+    <link rel="stylesheet" href="feedme.css">
 </head>
 <body>    
     <div class="hero">
@@ -21,7 +21,7 @@
         //initiati g the profile pic input
         let profilePic = document.getElementById("profile-pic");
         let inputFile = document.getElementById("input-file");
-
+        
         inputFile.onchange = function (){
             profilePic.src = URL.createObjectURL(inputFile.files[0]);
         }
