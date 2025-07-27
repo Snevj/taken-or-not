@@ -1,17 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Feed me</title>
     <link rel="stylesheet" href="feedme.css">
 </head>
-<body>    
+
+<body>
     <div class="hero">
         <div class="card">
             <form place-holder="hey">Enter their name</form>
             <button onclick="displayName()">Enter Their Name</button>
-            <p id="nameParagraph"><h1></h1></p>
+            <p id="nameParagraph">
+            <h1></h1>
+            </p>
             <p id="otherParagraph"></p>
             <img src="pfp.jpeg" id="profile-pic">
             <label for="input-file">Enter the image</label>
@@ -22,11 +26,11 @@
         //initiati g the profile pic input
         let profilePic = document.getElementById("profile-pic");
         let inputFile = document.getElementById("input-file");
-        
-        inputFile.onchange = function (){
+
+        inputFile.onchange = function () {
             profilePic.src = URL.createObjectURL(inputFile.files[0]);
         }
-        var storedName = ""; 
+        var storedName = "";
 
         function displayName() {
             var name = prompt("Please enter your name:");
@@ -46,4 +50,5 @@
     </script>
 
 </body>
+
 </html>
